@@ -2,7 +2,7 @@
   "name": "video-game-task",
   "version": "0.1.0",
   "engines": {
-    "node": "15.0.0"
+    "node": "15.10.0"
   },
   "private": true,
   "dependencies": {
