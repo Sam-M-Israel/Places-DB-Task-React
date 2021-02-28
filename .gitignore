@@ -24,3 +24,7 @@ yarn-error.log*
 
 .idea
 /.idea/
+/Server/node_modules/
+/Client/node_modules/
+/Server/views/
+/Server/routes/

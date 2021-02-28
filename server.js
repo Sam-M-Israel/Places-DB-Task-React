@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 
 const connectionString = "mongodb+srv://samUser:dbPass123456@cluster0-udemy-course.lifhy.mongodb.net/test?retryWrites=true&w=majority";
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
+    console.log(__dirname)
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
