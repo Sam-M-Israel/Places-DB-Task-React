@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 const connectionString = "mongodb+srv://samUser:dbPass123456@cluster0-udemy-course.lifhy.mongodb.net/test?retryWrites=true&w=majority";
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
     console.log(__dirname)
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
@@ -29,7 +29,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         app.get('/api/get-database', (req,res) => {
             db.collection('places').find().toArray()
                 .then(results => {
-                    res.send({ places: results });
+                    res.send(JSON.stringify({ places: results }));
                 })
                 .catch(error => console.error(error))
         })
@@ -109,7 +109,10 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
             }
         })
 
-        app.listen(process.env.PORT || 8080);
+        const port = process.env.PORT || 8080;
+        app.listen(port);
+
+        console.log(`Password generator listening on ${port}`);
     })
     .catch(console.error);
 

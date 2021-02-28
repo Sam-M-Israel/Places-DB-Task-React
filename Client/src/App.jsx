@@ -14,6 +14,7 @@ const App = () => {
     const getPlaceClick = () => {
         fetch('/api/get-database').then(res => res.json()).then((result) => {
             const allPlaces = [];
+            console.log(result)
             result.places.forEach(place => {
                 allPlaces.push(place);
             });
