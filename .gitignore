@@ -28,3 +28,4 @@ yarn-error.log*
 /Client/node_modules/
 /Server/views/
 /Server/routes/
+/Client/package-lock.json
