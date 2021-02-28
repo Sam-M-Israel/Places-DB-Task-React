@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(187deg, rgba(2,0,36,1) 0%, rgba(41,55,14,1) 0%, rgba(0,255,162,1) 100%);
+  min-height: 100vh;
+}
+
+.topButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.topButtonContainer Button {
+  margin: 40px 10px;
+}
+
+.searchByContainer {
+  margin: 40px 10px;
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: min-content;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#232323;
+  transition: .5s ease;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addPlaceForm {
+  padding: 7px;
+  font-size: calc(7px + 2vmin);
+  color: white;
+}
+.addPlaceForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.addPlaceForm form input, .addPlaceForm form button{
+  margin: 7px;
+  border-radius: 7px;
+}
+
+.placesListContainer {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
